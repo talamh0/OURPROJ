@@ -1,0 +1,18 @@
+# virtual environment
+venv/
+
+# compiled bytecode
+__pycache__/
+*.pyc
+
+# environment/config
+.env
+
+# OS or editor-specific
+.DS_Store
+.vscode/
+venv/
+__pycache__/
+*.pyc
+
+
