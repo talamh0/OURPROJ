@@ -7,7 +7,7 @@ from langchain.memory import ConversationBufferMemory
 from langchain_core.embeddings import Embeddings
 
 # Set up Google API key
-genai.configure(api_key="AIzaSyD55FBUYSZ2ZkzhK7WAokfsZdzD8Ddw_L8")
+genai.configure(api_key="API_key")
 
 # Define custom embedding class using Gemini embeddings
 class ManualEmbeddingModel(Embeddings):
