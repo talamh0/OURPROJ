@@ -10,7 +10,7 @@ from langchain_community.document_loaders import PyPDFLoader, TextLoader
 import google.generativeai as genai
 
 # Set up Google Generative AI API
-genai.configure(api_key="AIzaSyD55FBUYSZ2ZkzhK7WAokfsZdzD8Ddw_L8")
+genai.configure(api_key="API_key")
 
 # Define file paths
 file_paths = [
@@ -63,11 +63,6 @@ while i < len(sentences):
 documents = [Document(page_content=chunk, metadata={"id": str(uuid.uuid4())}) for chunk in chunks]
 print(f"Total chunks generated: {len(documents)}")
 
-# Check for matching content (optional debug)
-matched_chunks = [doc for doc in documents if "الحوسبة السحابية" in doc.page_content]
-print(f"Chunks containing 'الحوسبة السحابية': {len(matched_chunks)}")
-for i, doc in enumerate(matched_chunks[:3]):
-    print(f"\nChunk {i+1}:\n{doc.page_content}\n{'-'*40}")
 
 # Delete existing Chroma store (if exists)
 chroma_base_path = "chroma_store"
